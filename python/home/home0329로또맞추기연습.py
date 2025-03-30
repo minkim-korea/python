@@ -23,7 +23,7 @@ for j in range(6):
     #print("확인:",ran_list[j]) 정답이뭔지 확인 하려고 만듬 
     if ran_list[j] in my_list:
          lotto_c = lotto_c +1
-         lotto_n.append(my_list[j])
+         lotto_n.append(ran_list[j])
 
 # ran_list.sort()      숫자정렬해봄 
 # my_list.sort()
