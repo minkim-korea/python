@@ -26,7 +26,7 @@ lotto_count= 0
 lotto_list=[]
 i= 0
 while i<6:
-     print("랜덤번호: {}".format(ran_list))
+     # print("랜덤번호: {}".format(ran_list))
      my_input= int(input("{}번째숫자를입력하세요".format(i+1)))
      if my_input not in my_list:
         my_list.append(my_input)
