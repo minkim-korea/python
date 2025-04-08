@@ -42,10 +42,6 @@ print("[상대카드]")
 for i in youCard:
       print(f"[{sh[i['shape']]},{no[i['no']]}]")
 
-
-
-
-
 score = [0]*5
 
 for i in range(5):
