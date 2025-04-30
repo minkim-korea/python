@@ -2,17 +2,24 @@
 ###진행 
 students=[]
 title=['번호','이름','국어','영어','수학','합계','평균','등수']
+
 count = 1
 
 while True:
     print("-"*40)
-    print("      [학생성적프로그램]")
+    print("           [학생성적프로그램]")
     print("-"*40)
     print("1. 학생성적입력")
     print("2. 학생성적출력")
     print("3. 학생성적수정")
+    print("4. 성적순 정렬")
+    print("5  삭제")
+    print("6  검색")
+    print("0 프로그램종료")
     print("-"*40)
     choice = int (input("번호를 입력하세요"))
+     
+   
 
     if choice==1:
         while True:
@@ -100,9 +107,33 @@ while True:
                    s["avg"] = s["total"]/3
                    print(f"수학점수{pre_math}점을 {s['math']}으로 변경되었습니다.")
                
+    elif choice ==4:
+        students.sort(key=lambda x:x["total"],reverse=True)
+        print("정렬완료")
+       
+               
+    elif choice ==5:
+          name= input("삭제할 학생이름")
+          for s in students:
+              if s['name'] ==name:
+                  students.remove(s)       
+                  print("삭제완료")
+                  break
+       
+               
+    elif choice ==6:
+        name = input ("검색할 학생이름")
+        for s in students:
+            if s['name']==name:
+        
+              print(f"{name}을/를 찾았습니다.")
+              break 
+            else : 
+              print(f"{name}을/를 못찾았습니다.")  
              
-         
-         
+    elif choice ==0:
+        print("프로그램종료합니다")
+        break
          
          
             
